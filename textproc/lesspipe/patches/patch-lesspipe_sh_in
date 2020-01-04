@@ -1,0 +1,34 @@
+--- lesspipe.sh.in.orig	Mon Jul  8 01:52:30 2019
++++ lesspipe.sh.in	Wed Jul  1 15:54:42 2020
+@@ -934,16 +934,16 @@ isfinal() {
+     msg "append $sep to filename to view the DjVu source"
+     djvutxt "$2"
+ #endif
+-#ifdef docx2txt.pl
++#ifdef docx2txt
+   elif [[ "$1" = *Microsoft\ Word\ 2007* ]]; then
+-    if cmd_exist docx2txt.pl; then
++    if cmd_exist docx2txt; then
+       msg "append $sep to filename to view the raw word document"
+-      docx2txt.pl "$2" -
++      docx2txt "$2" -
+     else
+-      msg "install docx2txt.pl to view human readable text"
++      msg "install docx2txt to view human readable text"
+       cat "$2"
+     fi
+-#elif doc2txt.pl
++#elif docx2txt.pl
+ #ifdef odt2txt
+   elif [[ "$1" = *OpenDocument\ Text* ]]; then
+     if cmd_exist odt2txt; then
+@@ -1162,6 +1162,9 @@ isfinal() {
+     if cmd_exist id3v2; then
+       msg "append $sep to filename to view the raw data"
+       istemp "id3v2 --list" "$2"
++    elif cmd_exist mediainfo; then
++      msg "append $sep to filename to view the raw data"
++      mediainfo --Full "$2"
+     elif cmd_exist mp3info2; then
+       msg "append $sep to filename to view the raw data"
+       mp3info2 "$2"

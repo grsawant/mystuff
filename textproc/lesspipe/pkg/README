@@ -1,0 +1,96 @@
+lesspipe.sh, a preprocessor for less
+====================================
+
+1. Usage
+========
+
+ (see also the man page lesspipe.1)
+
+ To activate lesspipe.sh the environment variable LESSOPEN has to be defined
+ in the following way:
+
+ LESSOPEN="|lesspipe.sh %s"; export LESSOPEN (sh like shells)
+ setenv LESSOPEN "|lesspipe.sh %s"  (csh, tcsh)
+
+ Several environment variables can influence the behavior of lesspipe.sh.
+
+ LESSQUIET will suppress additional output not belonging to the file contents
+ if set to a non empty value.
+
+ LESS can be used to switch on colored less output (has to contain -r or -R).
+
+ LESSCOLORIZER can contain a syntax highlighting program different from
+ the code2color used by default (currently only pygmentize allowed).
+
+ Code for using LESS_ADVANCED_PREPROCESSOR is optionally generated (configure).
+ LESS_ADVANCED_PREPROCESSOR will switch on filtering methods for html, rtf, ps
+ files and files with alternate character encoding, if this variable is set.
+ Filtering these formats is also done if there is no LESS_ADVANCED_PREPROCESSOR
+ support (then this string is not contained in lesspipe.sh). Otherwise these
+ types of files will be shown unmodified.
+
+2. Supported file formats
+=========================
+
+ Currently lesspipe.sh [3] supports the following compression methods
+ and file types (i.e. the file contents gets transformed by lesspipe.sh):
+
+2.1 Supported compression methods
+---------------------------------
+ gzip, compress, pack requires gzip
+ bzip2   requires bzip2
+ zip   requires unzip
+ rar   requires rar or unrar
+ 7-zip   requires 7za
+ lzip   requires lzip
+ lzma   requires lzma (limited support only)
+ xz   requires xz
+ zstd   requires zstd
+ brotli   requires bro
+ lz4   requires lz4
+
+2.2 List of preprocessed file types
+-----------------------------------
+ tar  requires GNU tar and optionally tarcolor for coloring
+ nroff(mandoc) requires groff
+ ar library requires ar
+ jar archive requires fastjar or unzip
+ rar archive requires unrar or rar
+ 7-zip archive requires 7za
+ lzip archive requires lzip
+ shared library requires nm
+ executable requires strings
+ directory displayed using ls -lA
+ RPM  requires GNU cpio and rpm2cpio or rpmunpack, optionally rpm
+ Microsoft Word < 2007 requires antiword or catdoc or libreoffice
+ MS Powerpoint < 2007 requires ppthtml or libreoffice
+ MS Excel < 2007 requires xlhtml or libreoffice
+ Microsoft Word (docx) >= 2007 requires pandoc or doc2txt.pl or libreoffice
+ MS Powerpoint (pptx) >= 2007 requires pptx2md or libreoffice
+ MS Excel (xlsx) >= 2007 requires git-xlsx-textconv or lgit-xlsx-textconv.pl or libreoffice
+ epub requires pandoc
+ Debian  requires ar, gzip and tar, shows more info if dpkg is installed
+ html  requires html2text or elinks or links or lynx or w3m
+ pdf  requires pdftotext or pdftohtml
+ perl  requires pod2text
+ rtf  requires pandoc or libreoffice or unrtf
+ dvi  requires dvi2tty
+ djvu  requires djvutxt
+ ps    requires pstotext or ps2ascii (from the gs package)
+ mp3  requires id3v2 or mp3info or mp3info2
+ jpg, png, gif requires identify
+ mp4   requires mediainfo
+ iso images requires isoinfo
+ MacOSX archive requires lsbom
+ MacOS X bom requires lsbom
+ MacOS X plist requires plutil
+ cab  requires cabextract (version 1.0 or above)
+ gpg encrypted requires gpg
+ perl storable requires perl (and the perl modules Storable and Data::Dumper)
+ perl pod       requires perldoc
+ OASIS  Opendocument text documents (used for Openoffice, Libreoffice)
+   requires odt2txt or pandoc or libreoffice or unzip and o3tohtml or sxw2txt
+    (distributed together with lesspipe)
+ nc4  requires ncdump (NetCDF format)
+ hdf5  requires h5dump (Hierarchical Data Format)
+ crt, pem, csr, crl requires openssl

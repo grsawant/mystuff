@@ -1,0 +1,4 @@
+lesspipe is meta application, which pipes output from format specific converters
+to less, it supports rtf, doc, docx, pdf, odt, etc document formats and also
+metadata in case of audio and video files. Any document can be opened with a simple
+command "less"

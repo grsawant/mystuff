@@ -1,0 +1,5 @@
+@comment $OpenBSD: PLIST,v$
+bin/code2color
+bin/lesspipe.sh
+@man man/man1/lesspipe.1
+share/doc/pkg-readmes/${PKGSTEM}

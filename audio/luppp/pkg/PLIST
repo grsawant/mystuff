@@ -1,0 +1,9 @@
+@comment $OpenBSD: PLIST,v$
+@bin bin/luppp
+share/appdata/
+share/appdata/luppp.appdata.xml
+share/applications/
+share/applications/luppp.desktop
+share/pixmaps/
+share/pixmaps/luppp.png
+@tag update-desktop-database

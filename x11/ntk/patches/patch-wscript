@@ -1,0 +1,36 @@
+$OpenBSD$
+
+Correct shared library numbers
+No -ldl
+Remove call to ldconfig
+
+INDEX: wscript
+--- wscript.orig	Thu Oct  5 07:25:47 2017
++++ wscript	Sun Jul  5 20:57:11 2020
+@@ -9,8 +9,8 @@ import sys
+ 
+ # Version of this package (even if built as a child)
+ 
+-FL_MAJOR_VERSION='1'
+-FL_MINOR_VERSION='3'
++FL_MAJOR_VERSION=os.environ.get('LMAJ')
++FL_MINOR_VERSION=os.environ.get('LMIJ')
+ FL_PATCH_VERSION='1000'
+ 
+ PACKAGE_VERSION = FL_MAJOR_VERSION + '.' + FL_MINOR_VERSION + '.' + FL_PATCH_VERSION
+@@ -119,7 +119,6 @@ def configure(conf):
+     conf.env.BUNDLED = []    
+ 
+     conf.env['LIB_PTHREAD'] = ['pthread']
+-    conf.env['LIB_DL'] = ['dl']
+     conf.env['LIB_M'] = ['m']
+ 
+     conf.env.BUNDLED = []    
+@@ -552,7 +551,6 @@ src/Fl_Gl_Window.cxx
+     bld.install_files( bld.env.INCLUDEDIR + '/ntk/FL', start_dir.ant_glob('*.H *.h'),
+                        cwd=start_dir, relative_trick=True)
+ 
+-    bld.add_post_fun( run_ldconfig )
+ 
+     #  bld.install_files( string.join( [ '${DATADIR}/doc', APPNAME ], '/' ), bld.path.ant_glob( 'doc/*.html doc/*.png' ) )
+     

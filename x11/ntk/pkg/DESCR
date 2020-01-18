@@ -1,0 +1,4 @@
+The Non Tool Kit (NTK) is a fork of the Fast Light ToolKit library, adding
+improved graphics rendering via Cairo a streamlined and enhanced widget set,
+and other features designed to improve the appearance and performance of
+the Non applications.

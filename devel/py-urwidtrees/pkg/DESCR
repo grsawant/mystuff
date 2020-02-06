@@ -1,0 +1,2 @@
+This is widget container API for the urwid tookit. It uses a MVC approach
+and allows to build trees of widgets.

@@ -1,0 +1,23 @@
+@comment $OpenBSD: PLIST,v$
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/PKG-INFO
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/SOURCES.txt
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/dependency_links.txt
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/requires.txt
+lib/python${MODPY_VERSION}/site-packages/urwidtrees-${MODPY_EGG_VERSION}-py${MODPY_VERSION}.egg-info/top_level.txt
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/__init__.py
+${MODPY_COMMENT}lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}/
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}__init__.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}decoration.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}lru_cache.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}nested.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}tree.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}version.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/${MODPY_PYCACHE}widgets.${MODPY_PYC_MAGIC_TAG}pyc
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/decoration.py
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/lru_cache.py
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/nested.py
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/tree.py
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/version.py
+lib/python${MODPY_VERSION}/site-packages/urwidtrees/widgets.py

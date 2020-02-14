@@ -1,0 +1,41 @@
+$OpenBSD$
+control shared library version
+remove call to ldconfig
+install api docs
+--- source/Makefile.orig	Sat Aug 25 00:11:47 2018
++++ source/Makefile	Thu Jul  9 21:35:50 2020
+@@ -24,9 +24,10 @@ SUFFIX := $(shell uname -m | sed -e 's/^unknown/$//' -
+ PREFIX ?= /usr/local
+ INCDIR ?= $(PREFIX)/include
+ LIBDIR ?= $(PREFIX)/lib$(SUFFIX)
++DOCDIR ?= $(PREFIX)/share/doc
+ 
+-MAJVERS = 1
+-MINVERS = 6.2
++MAJVERS = $(LMAJ)
++MINVERS = $(LMIN)
+ VERSION = $(MAJVERS).$(MINVERS)
+ DISTDIR = zita-resampler-$(VERSION)
+ 
+@@ -37,7 +38,6 @@ CXXFLAGS += -march=native
+ LDFLAGS += 
+ LDLIBS +=
+ 
+-
+ ZITA-RESAMPLER_SO = libzita-resampler.so
+ ZITA-RESAMPLER_MAJ = $(ZITA-RESAMPLER_SO).$(MAJVERS)
+ ZITA-RESAMPLER_MIN = $(ZITA-RESAMPLER_MAJ).$(MINVERS)
+@@ -54,11 +54,12 @@ $(ZITA-RESAMPLER_O):	$(ZITA-RESAMPLER_H)
+ 
+ 
+ install:	$(ZITA-RESAMPLER_MIN)
++	install -d $(DESTDIR)$(DOCDIR)/zita-resampler
+ 	install -d $(DESTDIR)$(INCDIR)/zita-resampler
+ 	install -d $(DESTDIR)$(LIBDIR)
++	install -m 644 ../docs/*       $(DESTDIR)$(DOCDIR)/zita-resampler
+ 	install -m 644 $(ZITA-RESAMPLER_H)   $(DESTDIR)$(INCDIR)/zita-resampler
+ 	install -m 755 $(ZITA-RESAMPLER_MIN) $(DESTDIR)$(LIBDIR)
+-	ldconfig
+ 	ln -sf $(ZITA-RESAMPLER_MIN) $(DESTDIR)$(LIBDIR)/$(ZITA-RESAMPLER_SO)
+ 
+ uninstall:

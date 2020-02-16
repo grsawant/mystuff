@@ -1,0 +1,16 @@
+@comment $OpenBSD: PLIST,v$
+include/zita-resampler/
+include/zita-resampler/cresampler.h
+include/zita-resampler/resampler-table.h
+include/zita-resampler/resampler.h
+include/zita-resampler/vresampler.h
+@so lib/libzita-resampler.so
+@lib lib/libzita-resampler.so.${LIBzita-resampler_VERSION}
+share/doc/zita-resampler/
+share/doc/zita-resampler/filt1.png
+share/doc/zita-resampler/filt2.png
+share/doc/zita-resampler/inpdist.png
+share/doc/zita-resampler/resampler.html
+share/doc/zita-resampler/src-1kHz.png
+share/doc/zita-resampler/zita-1kHz.png
+share/doc/zita-resampler/zitadocs.css

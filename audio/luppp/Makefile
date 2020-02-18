@@ -10,7 +10,7 @@ CATEGORIES =	audio
 
 HOMEPAGE =	http://openavproductions.com/luppp/
 
-MAINTAINER =		Dimitri Karamazov <deserter666@danwin1210.me
+MAINTAINER =		Gagandeep Sawant <grsa32@gmail.com>
 
 #GPLv2
 PERMIT_PACKAGE =	Yes

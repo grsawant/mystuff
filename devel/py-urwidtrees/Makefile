@@ -10,7 +10,7 @@ CATEGORIES =	devel
 
 HOMEPAGE =	https://github.com/pazz/urwidtrees
 
-MAINTAINER =		Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =		Gagandeep Sawant <grsa32@gmail.com>
 
 #GPLv3
 PERMIT_PACKAGE =	Yes

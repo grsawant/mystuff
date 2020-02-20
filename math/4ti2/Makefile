@@ -12,7 +12,7 @@ CATEGORIES =	math
 
 HOMEPAGE =	https://4ti2.github.io/
 
-MAINTAINER =	Dimitri Karamazav <deserter666@danwin1210.me>
+MAINTAINER =	Gagandeep Sawant <grsa32@gmail.com>
 
 #GPL
 PERMIT_PACKAGE =	Yes

@@ -13,7 +13,7 @@ CATEGORIES =	math
 
 HOMEPAGE =	https://www.inf.ethz.ch/personal/fukudak/cdd_home/
 
-MAINTAINER =		Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =		Gagandeep Sawant <grsa32@gmail.com>
 
 #GPL
 PERMIT_PACKAGE =	Yes

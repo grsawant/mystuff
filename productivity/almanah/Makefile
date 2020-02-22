@@ -10,7 +10,7 @@ CATEGORIES =	productivity
 
 HOMEPAGE =	https://wiki.gnome.org/Apps/Almanah_Diary
 
-MAINTAINER =		Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =		Gagandeep Sawant <grsa32@gmail.com>
 
 #GPL
 PERMIT_PACKAGE =	Yes

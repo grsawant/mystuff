@@ -8,7 +8,7 @@ GH_TAGNAME =	2.1
 
 CATEGORIES =	sysutils
 
-MAINTAINER =		Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =		Gagandeep Sawant <grsa32@gmail.com>
 
 #MIT
 PERMIT_PACKAGE =	Yes

@@ -11,7 +11,7 @@ CATEGORIES =	textproc
 
 HOMEPAGE =	https://www-zeuthen.desy.de/~friebel/unix/lesspipe.html
 
-MAINTAINER =	deserter666@danwin1210.me
+MAINTAINER =	Gagandeep Sawant <grsa32@gmail.com>
 
 #GPLv2
 PERMIT_PACKAGE =	Yes

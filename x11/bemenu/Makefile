@@ -9,7 +9,7 @@ GH_ACCOUNT =	Cloudef
 GH_PROJECT =	bemenu
 GH_TAGNAME =	0.4.1
 
-MAINTAINER =	Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =	Gagandeep Sawant <grsa32@gmail.com>
 
 # Library and bindings: LGPLv3+
 # Everything else: GPLv3+

@@ -12,7 +12,7 @@ CATEGORIES =	x11
 
 HOMEPAGE =	https://non.tuxfamily.org/wiki/NTK
 
-MAINTAINER =	Dimitri Karamazov <deserter666@danwin1210.me>
+MAINTAINER =	Gagandeep Sawant <grsa32@gmail.com>
 
 # LGPLv2 with exceptions (see COPYING)
 PERMIT_PACKAGE =	Yes

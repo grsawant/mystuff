@@ -1,0 +1,38 @@
+@comment $OpenBSD: PLIST,v$
+@bin bin/drumstick-dumpove
+@bin bin/drumstick-dumpsmf
+@bin bin/drumstick-dumpwrk
+@bin bin/drumstick-vpiano
+include/drumstick/
+include/drumstick/backendmanager.h
+include/drumstick/macros.h
+include/drumstick/qove.h
+include/drumstick/qsmf.h
+include/drumstick/qwrk.h
+include/drumstick/rtmidiinput.h
+include/drumstick/rtmidioutput.h
+lib/drumstick/
+@so lib/drumstick/libdrumstick-rt-eassynth.so
+@so lib/drumstick/libdrumstick-rt-fluidsynth.so
+@so lib/drumstick/libdrumstick-rt-net-in.so
+@so lib/drumstick/libdrumstick-rt-net-out.so
+@so lib/drumstick/libdrumstick-rt-oss-in.so
+@so lib/drumstick/libdrumstick-rt-oss-out.so
+@lib lib/libdrumstick-file.so.${LIBdrumstick-file_VERSION}
+@lib lib/libdrumstick-rt.so.${LIBdrumstick-rt_VERSION}
+lib/pkgconfig/drumstick-file.pc
+lib/pkgconfig/drumstick-rt.pc
+share/applications/drumstick-vpiano.desktop
+share/drumstick/
+share/drumstick/cmake/
+share/drumstick/cmake/drumstick-file-config${MODCMAKE_BUILD_SUFFIX}
+share/drumstick/cmake/drumstick-file-config.cmake
+share/drumstick/cmake/drumstick-rt-config${MODCMAKE_BUILD_SUFFIX}
+share/drumstick/cmake/drumstick-rt-config.cmake
+share/icons/hicolor/16x16/apps/drumstick.png
+share/icons/hicolor/32x32/apps/drumstick.png
+share/icons/hicolor/48x48/apps/drumstick.png
+share/icons/hicolor/64x64/apps/drumstick.png
+share/icons/hicolor/scalable/apps/drumstick.svgz
+@tag update-desktop-database
+@tag gtk-update-icon-cache %D/share/icons/hicolor

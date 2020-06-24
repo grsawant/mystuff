@@ -1,0 +1,19 @@
+$OpenBSD$
+
+Fix iconv.h not found error
+
+--- CMakeLists.txt.orig	Tue Dec  1 19:36:18 2020
++++ CMakeLists.txt	Tue Dec  1 19:40:00 2020
+@@ -234,6 +234,12 @@ if (USE_LIBXML)
+ 	endif ()
+ endif ()
+ 
++#adding iconv
++if (USE_LIBXML)
++	FIND_PATH( ICONV_INCLUDE_DIR NAMES iconv.h )
++	SET(ICONV_INCLUDE_DIRS ${ICONV_INCLUDE_DIR})
++	include_directories(${ICONV_INCLUDE_DIRS})
++endif ()
+ if (USE_EXPAT)
+ 	add_definitions(-DGENERATEDSAXPARSER_XMLPARSER_EXPAT)
+ 	message("FATAL: EXPAT support not implemented")

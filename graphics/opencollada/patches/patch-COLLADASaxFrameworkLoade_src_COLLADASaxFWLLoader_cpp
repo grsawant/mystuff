@@ -1,0 +1,14 @@
+$OpenBSD$
+
+timeb.h not present in OpenBSD
+
+--- COLLADASaxFrameworkLoader/src/COLLADASaxFWLLoader.cpp.orig	Tue Dec  1 19:29:04 2020
++++ COLLADASaxFrameworkLoader/src/COLLADASaxFWLLoader.cpp	Tue Dec  1 19:29:18 2020
+@@ -27,7 +27,6 @@ http://www.opensource.org/licenses/mit-license.php
+ #include "COLLADAFWConstants.h"
+ 
+ #include <sys/types.h>
+-#include <sys/timeb.h>
+ #include <fstream>
+ 
+ namespace COLLADASaxFWL

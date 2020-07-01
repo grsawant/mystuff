@@ -1,0 +1,15 @@
+$OpenBSD$
+
+isnan is called directly in OpenBSD
+
+--- GeneratedSaxParser/src/GeneratedSaxParserUtils.cpp.orig	Tue Dec  1 17:50:41 2020
++++ GeneratedSaxParser/src/GeneratedSaxParserUtils.cpp	Tue Dec  1 17:52:32 2020
+@@ -1556,7 +1556,7 @@ namespace GeneratedSaxParser
+ #ifdef isnan
+         return isnan( value );
+ #else
+-        return std::isnan(value);
++        return isnan(value);
+ #endif
+ #endif
+     }

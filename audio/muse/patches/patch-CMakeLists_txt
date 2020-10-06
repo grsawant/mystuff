@@ -1,0 +1,33 @@
+$OpenBSD$
+
+fix build by forcing library and include dirs
+since LDFLAGS, CPPFLAGS don't work
+
+Index: CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -101,7 +101,7 @@ SET(MusE_VERSION_MINOR 0)
+ SET(MusE_VERSION_PATCH 0)
+ SET(MusE_VERSION       "4.0")
+ SET(MusE_VERSION_FULL  "4.0")
+-SET(MusE_INSTALL_NAME  "muse-4.0")
++SET(MusE_INSTALL_NAME  "muse")
+ SET(MusE_EXEC_NAME     "muse4")
+ 
+ SET(MusE_BIN_DIR ${CMAKE_INSTALL_PREFIX}/bin)
+@@ -275,6 +275,7 @@ LINK_DIRECTORIES(${Qt5Core_LIBRARY_DIRS})
+ LINK_DIRECTORIES(${Qt5UiTools_LIBRARY_DIRS})
+ LINK_DIRECTORIES(${Qt5Xml_LIBRARY_DIRS})
+ LINK_DIRECTORIES(${Qt5Svg_LIBRARY_DIRS})
++LINK_DIRECTORIES(${LOCALBASE}/lib)
+ 
+ SET(QT_LIBRARIES ${Qt5Widgets_LIBRARIES} ${Qt5UiTools_LIBRARIES} ${Qt5Xml_LIBRARIES} ${Qt5Svg_LIBRARIES} ${Qt5Core_LIBRARIES})
+ #~ set(CMAKE_AUTOUIC ON)
+@@ -289,6 +290,7 @@ SET(QT_LIBRARIES ${Qt5Widgets_LIBRARIES} ${Qt5UiTools_
+ ## find ladspa.h
+ ##
+ 
++SET(CMAKE_REQUIRED_INCLUDES ${LOCALBASE}/include)
+ CHECK_INCLUDE_FILE(ladspa.h HAVE_LADSPA_H)
+ if(NOT HAVE_LADSPA_H)
+       message(FATAL_ERROR "** ERROR: header file ladspa.h is required, but was not found."
